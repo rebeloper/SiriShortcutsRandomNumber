@@ -12,6 +12,7 @@
 		C9456F502154E1C5005F5E5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9456F4E2154E1C5005F5E5C /* Main.storyboard */; };
 		C9456F522154E1C5005F5E5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9456F512154E1C5005F5E5C /* Assets.xcassets */; };
 		C9456F552154E1C5005F5E5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9456F532154E1C5005F5E5C /* LaunchScreen.storyboard */; };
+		C9456F5E2154E386005F5E5C /* UserActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9456F5D2154E386005F5E5C /* UserActivityType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		C9456F512154E1C5005F5E5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9456F542154E1C5005F5E5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9456F562154E1C5005F5E5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9456F5C2154E319005F5E5C /* SiriShortcutsRandomNumber.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriShortcutsRandomNumber.entitlements; sourceTree = "<group>"; };
+		C9456F5D2154E386005F5E5C /* UserActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +57,10 @@
 		C9456F492154E1C5005F5E5C /* SiriShortcutsRandomNumber */ = {
 			isa = PBXGroup;
 			children = (
+				C9456F5C2154E319005F5E5C /* SiriShortcutsRandomNumber.entitlements */,
 				C9456F4A2154E1C5005F5E5C /* AppDelegate.swift */,
 				C9456F4C2154E1C5005F5E5C /* ViewController.swift */,
+				C9456F5D2154E386005F5E5C /* UserActivityType.swift */,
 				C9456F4E2154E1C5005F5E5C /* Main.storyboard */,
 				C9456F512154E1C5005F5E5C /* Assets.xcassets */,
 				C9456F532154E1C5005F5E5C /* LaunchScreen.storyboard */,
@@ -96,6 +101,11 @@
 				TargetAttributes = {
 					C9456F462154E1C5005F5E5C = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -137,6 +147,7 @@
 			files = (
 				C9456F4D2154E1C5005F5E5C /* ViewController.swift in Sources */,
 				C9456F4B2154E1C5005F5E5C /* AppDelegate.swift in Sources */,
+				C9456F5E2154E386005F5E5C /* UserActivityType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SiriShortcutsRandomNumber/SiriShortcutsRandomNumber.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R252PR8AVU;
 				INFOPLIST_FILE = SiriShortcutsRandomNumber/Info.plist;
@@ -300,6 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SiriShortcutsRandomNumber/SiriShortcutsRandomNumber.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R252PR8AVU;
 				INFOPLIST_FILE = SiriShortcutsRandomNumber/Info.plist;

@@ -40,6 +40,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
+  
+  func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+    switch userActivity.activityType {
+    case UserActivityType.GenerateRandomNumber:
+      if let viewController = window?.rootViewController as? ViewController {
+        viewController.generateRandomNumber()
+      }
+    default:
+      print("No such user activity")
+    }
+    
+    return false
+  }
 
 
 }
